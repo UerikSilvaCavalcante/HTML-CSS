@@ -1,0 +1,77 @@
+Curso de HTML5 - Mod 1
+links:
+	github.com/gustavoguanabara
+	gustavoguanabara.github.io
+Cap 1: Aula 4
+Surgimento da Internet
+	-Guerra Fria
+	-ARPA
+	->Produzir armas e tecnologia para os EUA
+	->ARPANET
+	->4 pontos e 4 computadores
+---------------------//---------------------------------
+Curso de HTML5 - Mod 2
+Cap 13: Aula 01
+Psicologia das cores
+	-Cores Primarias
+	-> Azul , Amarelo, Vermelho
+	-Cores Secundarias
+	-> Verde, Violeta, Laranja
+	-Cores Tercearias
+	->Cores entre as Primarias e secundarias
+---------------------------------------------------------
+	-Cores frias
+	-Cores quentes
+---------------------------------------------------------
+	-Paleta de cores 
+	->3 a 5 cores
+---------------------//----------------------------------
+Cap 14: Aula 01
+Tipografia
+	-Anatomia do Tipo
+	->serifa: Perninha nas letras
+	   -Cria uma linhas imaginaria
+	->Haste
+	->Filete: Une duas hastes
+	->arco
+	->esporão
+	->vértice
+	->terminal
+	->braço: sai de uma haste e vai pra cima
+	->espinha: curva no S
+	->barriga: B
+	->olho: buraco das letras
+	->orelha:
+	->calda: parte de baixo da letra g
+	-Glifo: cada letra de uma fonte
+	-Fonte: conjunto de glifos
+	-Familias tipograficas
+-----------------------//---------------------------------
+Cap 15: Aula 02
+Modelo de Caixas
+	-Tamanho das caixa
+	->Alturar: height
+	->Largura: width
+	-Border: Borda da caixa
+	->padding: espaço entre a borda e a caixa
+	-Margin: espaço fora da borda
+	-outline: Traçado fora da caixa
+	-Tipos de caixa:
+	->box-level
+		-se inicia em uma linha nova
+		-ocupa a largura total da tela
+		-pula pra proxima linha
+		-<div>; <h1>; <p>; <main>; <hr>; <header>; <nav>; <article>; <aside>; <footer>; <form>; <video>.
+	->inline-level
+	   -se inicia na frente da linha
+	   -cria o box do tamanho q precisa
+	   -continua na proxima linha
+	   -<span>; <a>; <code>; <smal>; <strong>; <em>; <sup> - <sub>; <label>; <button>; <input>;<select>.
+------------------------//----------------------------------
+Cap 18: Aula 01
+Git e github
+	-Repositorio local/remoto
+	-Repositorio local: Git
+		-> Repositorio de codigos
+	-Repositorio remoto: github		   
+	
