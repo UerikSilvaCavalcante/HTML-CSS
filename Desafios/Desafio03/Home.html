@@ -14,52 +14,44 @@
         }
 
         body {
-            background-color: rgb(0, 0, 0);
+            background-color: black;
             margin: 0px;
         }
 
-        h1 {
+         header {
+            padding: 10px;
+            font-family: 'Rubik Glitch','Rubik Maps', Arial, Helvetica, sans-serif;
+            font-weight: 100;
             color: white;
-            font-family:'Rubik Glitch' ,Arial, Helvetica, sans-serif;
+            background-color: black;
             text-align: center;
-            font-weight: lighter;
-        }
+            
+         }
 
-      main {
-        display: block;
-        width: 500px;
-        min-width: 320px;
-        max-width: 900px;
-        padding: 10px;
-        margin: auto;
-        margin-bottom: 30px;
-        border-radius: 0px 0px 5px 5px;
-      }
+         main {
+            position: absolute;
+            max-width: 410px;
+            max-height: 500px;
+            padding: 10px;
 
+            left: 50%;
+            top: 50%;
 
-    img {
-        margin: auto;
-        border: 5px solid white;
-        width: 30%;
-      }
-      
+            transform: translate(-50%, -50%);
+         }
+
+         
     </style>
 </head>
 <body>
+    <header>
+        <h1> Videos Legais</h1>
+    </header>
     <main>
-        <h1>Videos Legais</h1>
-        <a href="Pag02.html" rel="next"> 
-            <img src="Imagens/thumb-hardware.png" alt="thumb-hardware"></a>
-        <a href="Pag03.html" target="_self" rel="next">
-            <img src="Imagens/thumb-html.png" alt="thumb-hardware">
-        </a>
-        <br>
-        <a href="Pag04.html"  target="_self" rel="next">
-            <img src="Imagens/thumb-js.png" alt="thumb-js">
-        </a>
-        <a href="Pag05.html" target="_self" rel="next">
-            <img src="Imagens/thumb-python.png" alt="thumb-python">
-        </a>
+        <a href="Pag02.html"target="_self" rel="next"><img src="Imagens/thumb-hardware.png" alt="thumb-hardware"></a>
+        <a href="Pag03.html" target="_self" rel="next"><img src="Imagens/thumb-html.png" alt="html"></a>
+        <a href="Pag04.html"  target="_self" rel="next"><img src="Imagens/thumb-js.png" alt="java"></a>
+        <a href="Pag05.html" target="_self" rel="next"><img src="Imagens/thumb-python.png" alt="thumb-python"></a>
     </main>
 
 </body>
