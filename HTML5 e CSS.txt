@@ -77,3 +77,11 @@ Git e github
 ------------------------//-----------------------------------
 Cap 21: Aula 01	
 Tabelas ein sites 
+------------------------//-----------------------------------
+Mod 4
+Cap 24: Aula 03
+Metodo padrão: GET
+POST 
+	Usar o GET para busca, informaçoes publicas
+	Dados em GET aguentam 3.000 letras
+	Não usar GET em informaçoes sensiveis , imagens e envio de arquivos
