@@ -12,13 +12,12 @@
     <header>
         <h1>Meu site</h1>
         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
-        <menu id="itens">
-            <ul>
-                <li><a href="*">opção 1</a></li>
-                <li><a href="*">opção 2</a></li>
-                <li><a href="*">opção 3</a></li>
-                <li><a href="*">opção 4</a></li>
-            </ul>
+        <menu>
+            <ul >
+                <li class="itens" ><a href="*"  >opção 1</a></li>
+                <li class="itens"><a href="*"  >opção 2</a></li>
+                <li class="itens"><a href="*"  >opção 3</a></li>
+                <li class="itens"><a href="*"  >opção 4</a></li>
         </menu>
     </header>
     <main>
@@ -28,6 +27,7 @@
         </article>
     </main>
     <script>
+        var itens = window.document.getElementById('itens')
         function mudouTamnho() {
             if (window.innerWidth >= 768) {
                 itens.style.display = 'block'
@@ -37,11 +37,17 @@
 
         }
         function clickMenu() {
-            if (itens.style.display == 'block') {
-                itens.style.display = 'none'
+            var iconMenu = window.document.getElementById('burguer')
+            let menu =  window.document.getElementById('itens')
+            if (menu.classList.contains('hide')) {
+                menu.classList.add('show')
+                menu.classList.remove('hide')
+            } else {
+                menu.classList.add('hide')
+                menu.classList.remove('show')
             }
-           else {itens.style.display = 'block'}
         }
+
     </script>
 </body>
 </html>

@@ -33,10 +33,20 @@ span#burguer:hover {
     background-color: white;
     color: black;
     cursor: pointer;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
 }
 
-menu {
-    display: none;
+
+.hide {
+    height: 0px;
+    transition-duration: 1s;
+}
+
+.show {
+    height: 100%;
+    transition-duration: 1s;
+
 }
 
 menu > ul > li > a {
@@ -54,6 +64,9 @@ menu > ul > li > a {
 
 menu > ul > li > a:hover {
     background-color: gray;
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    transition-property: all;
 
 }
 
