@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: blueviolet;
+            padding: 10px;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 45px;
+        }
+        .menu {
+            position: absolute;
+            left: 0;
+            top: 45px;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            background-color: rgb(175, 127, 219);
+            text-align: center;
+        }
+
+        .hide {
+            transition: 0.5s;
+            /* opacity: 0; */
+            height: 0px;
+        }
+
+        .show {
+            transition-duration: 0.5s;
+            /* opacity: 1; */
+            height:150px;
+        }
+
+        .menu a {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            justify-items: center;
+
+            
+            padding: 10px 0;
+            text-decoration: none;
+            color: white;
+            font-size: 23px;
+        }
+
+        .menu a:hover {
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+            background-color: rgb(16, 24, 146);
+            text-decoration: underline;
+            font-size: 30px;
+           
+        }
+
+        .icon-menu {
+            width: 100%;
+            position: absolute;
+            left: 94%;
+        }
+
+        .icon-menu span {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .unrotate {
+            transition-duration: 0.5s;
+            rotate: 0deg;
+        }
+
+        .rotate {
+            transition-duration: 0.5s;
+            rotate: 90deg;
+        }
+
+        main {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: rgb(15, 41, 185);
+            width: 50vw;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .abaixa {
+            transition-duration: 0.5s;
+            top: 200px;
+        }
+
+        .sobe {
+            transition-duration: 0.5s;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div  class="icon-menu">
+            <span id="burguer" class="material-symbols-outlined unrotate">menu</span>
+        </div>
+        <div id="menu" class="menu hide" >
+            <a href="*">Sobre</a>
+            <a href="*">Home</a>
+            <a href="*">Contato</a>
+        </div>
+    </header>
+    <main id="txt" class="sobe">
+        <h1>Titulo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ut eum blanditiis quis inventore quaerat, nemo in! Ex ipsum cupiditate nostrum aliquam recusandae, alias voluptates nihil quae asperiores reiciendis explicabo?</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolores earum amet, nostrum facilis totam ducimus mollitia, libero sunt consequuntur voluptatem dicta ratione illo atque possimus, ipsum maiores ex ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis illum voluptas, excepturi natus sunt quam sint dolorum maiores quis ipsam sequi non veniam, adipisci optio amet alias ducimus. Eum, voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus architecto minima nisi id? Veritatis tenetur quaerat repudiandae earum beatae illum, dignissimos quod tempore! Iste itaque velit enim? Earum, ad ab?
+        </p>
+    </main>
+
+
+    <script src="js/all.min.js"></script>
+    <script>
+        var iconMenu = document.querySelector('.icon-menu')
+        iconMenu.addEventListener('click',()=>{
+            // let menu = document.getElementById('menu')
+            // if (menu.classList.contains('show')){
+            //     menu.classList.add('hide');
+            //     menu.classList.remove('show');
+            // } else {
+            //     menu.classList.add('show');
+            //     manu.classList.remove('hide');
+            // }
+
+            let menu = document.getElementById('menu')
+            let main = document.getElementById('txt')
+            let burguer = document.getElementById('burguer')
+            burguer.classList.add('rotate')
+            burguer.classList.remove('unrotate')
+            main.classList.add('abaixa')
+            main.classList.remove('sobe')
+
+            if (menu.classList.contains('show')){
+                menu.classList.add('hide');
+                menu.classList.remove('show');
+                main.classList.add('sobe')
+                main.classList.remove('abaixa')
+                burguer.classList.add('unrotate')
+                burguer.classList.remove('rotate')
+            } else {
+                menu.classList.add('show');
+                manu.classList.remove('hide');
+                main.classList.add('abaixa')
+                main.classList.remove('sobe')
+            }
+            
+        })
+    </script>
+</body>
+</html>

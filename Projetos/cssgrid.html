@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(226, 163, 68);
+        }
+
+        .conteiner {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 20vh 70vh 10vh;
+            grid-template-areas: "h h"
+                                  "m a"
+                                  "f f"  ;
+
+        }
+        
+        header {
+            background-color: rgb(0, 60, 255);
+            grid-area: h;
+        }
+
+        main {
+            background-color: rgb(249, 253, 0);
+
+            grid-area: m;
+        }
+
+        aside {
+            background-color: rgb(255, 0, 0);
+            grid-area: a;
+        }
+
+        footer {
+            background-color: rgb(7, 124, 7);
+            grid-area: f;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <header>
+            <h1>Titulo</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit et ex neque maiores? Laudantium dignissimos, perspiciatis veniam est atque aut eum odio quasi voluptatem, suscipit asperiores sequi quam impedit numquam.
+            </p>
+        </header>
+        <main>
+            <h2>Subtitulo</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores obcaecati earum dolores fugit consectetur placeat esse libero sint! Vero error labore unde eos eligendi numquam deleniti, alias maiores facere sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae pariatur suscipit provident quibusdam soluta optio quasi omnis fuga dicta natus eos praesentium adipisci nemo deserunt nulla ut molestias, assumenda itaque?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi incidunt nemo odio obcaecati hic unde aspernatur officia, accusamus eius quod suscipit optio odit tempora ab inventore quia totam magnam harum.
+            </p>
+        </main>
+        <aside>
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quas, sint neque fugit quaerat aliquid rem velit illo saepe in illum, praesentium necessitatibus voluptate ad dolores eveniet suscipit laborum laboriosam.
+            </p>
+        </aside>
+        <footer></footer>
+    </div>
+</body>
+</html>
