@@ -8,6 +8,7 @@
 
 html , body {
     background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .conteiner {
@@ -17,20 +18,288 @@ html , body {
     height: 100vh;
 }
 
+.content {
+    border-radius: 15px;
+    background-color: white;
+    width: 960px;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: blueviolet;
+    width: 40%;
+    height: 100%;
+
+
+    left: 0;
+}
+
+.title-welcome {
+    color: white;
+    font-size: 28px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.title-create {
+    color: blueviolet;  
+    font-size: 28px;
+    text-transform: capitalize;
+    font-weight: bold; 
+}
+
+.description-primary {
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    line-height: 30px;
+}
+
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 10px;
+    padding: 10px 50px;
+    background-color: gray;
+    width: 150px;
+    align-self: center;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid white;
+    transition: background-color 0.5s, color 0.5s;
+    transition-timing-function: ease;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: blueviolet;
+}
+
+.btn-second {
+    background-color:  blueviolet;
+    color: white;
+    border: 1px solid white;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btn-second:hover {
+    background-color: white;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+}
+
+
 .first-content {
     display: flex;
 }
 
-.list {
-    display: flex;
+.first-column {
+    text-align: center;
+    width: 40%;
+    z-index: 2;
 }
 
-.form {
+.second-column {
+    width: 60%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.description-second {
+    color: gray;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.icons {
+    border: 1px solid gray;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.icons:not(:first-child) {
+    margin-left: 10px;
+}
+
+.icons:hover {
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    background-color: blueviolet;
+}
+
+.icons:hover > li > i {
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+form input {
+    height: 45px;
+    border: none;
+    background-color: aliceblue;
+    width: 100%;
+}
+
+label {
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+i {
+    color: gray;
+    padding: 0px 5px 0px 5px;
 }
 
 .second-content {
     position: absolute;
-    display: none;
+    display: flex;
+}
+
+.second-content .first-column {
+    order: 2;
+}
+
+.second-content .second-column {
+    order: 1;
+}
+
+
+
+.sign-in-js .first-content .second-column {
+    z-index: -1;
+}
+
+
+.sign-in-js .second-content .second-column {
+    z-index: 12;
+}
+
+.sign-in-js .second-content .first-column {
+    z-index: 15;
+}
+
+.sign-in-js .content::before {
+    left: 60%;
+    animation-name: slidein;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    z-index: 13;
+}
+
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+
+.sign-up-js .content::before {
+    animation-name: slideout;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    z-index: 13;
+}
+
+.sign-up-js .first-content .second-column {
+    z-index: 12;
+}
+
+.sign-up-js .first-content .first-column {
+    z-index: 15;
+}
+
+.sign-in-js .first-content .first-column {
+    z-index: -1;
+    position: relative;
+    animation: deslocamento 0.5s ease delay iteration-count direction fill-mode;
+}
+
+@keyframes deslocamento {
+    from {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    to {
+        left: 110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes slidein {
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    25% {
+        left: 25%;
+        width: 50%;
+    }
+
+    50% {
+        width: 60%;
+    }
+
+    75% {
+        width: 50%;
+    }
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+    25% {
+        left: 25%;
+        width: 50%;
+    }
+
+    50% {
+        width: 60%;
+    }
+
+    75% {
+        width: 50%;
+    }
+
+    to {
+        left: 0;
+        width: 40%;
+    }
 }
