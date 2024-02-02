@@ -180,7 +180,7 @@ i {
 
 .second-content {
     position: absolute;
-    display: flex;
+    display: none;
 }
 
 .second-content .first-column {
@@ -191,14 +191,20 @@ i {
     order: 1;
 }
 
+.sign-in-js .second-content {
+    display: flex;
+}
 
+.sign-up-js .second-content {
+    display: flex;
+}
 
+.sign-in-js .first-content .first-column,
 .sign-in-js .first-content .second-column {
     z-index: -1;
 }
 
-
-.sign-in-js .second-content .second-column {
+.sign-in-js .second-content .second-column{
     z-index: 12;
 }
 
@@ -214,9 +220,16 @@ i {
     z-index: 13;
 }
 
-.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .first-column{
+    z-index: -1;
+}
+
 .sign-up-js .second-content .second-column {
     z-index: -1;
+    position: relative;
+    animation-name: deslocamento2;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
 }
 
 .sign-up-js .content::before {
@@ -234,13 +247,29 @@ i {
     z-index: 15;
 }
 
-.sign-in-js .first-content .first-column {
+.sign-in-js .first-content .second-column {
     z-index: -1;
     position: relative;
-    animation: deslocamento 0.5s ease delay iteration-count direction fill-mode;
+    animation-name: deslocamento;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
 }
 
 @keyframes deslocamento {
+    from {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    to {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamento2 {
     from {
         left: 0;
         opacity: 1;
