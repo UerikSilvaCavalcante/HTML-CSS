@@ -333,11 +333,14 @@ i {
     }
 }
 
-/* .tema {
+.tema {
     position: absolute;
     top: 30px;
     left: 30px;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .btn-tema {
     padding: 10px;
@@ -345,8 +348,6 @@ i {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: white;
-    color:  blueviolet;
     font-size: 20px;
     transition: background-color 0.5s, color 0.5s;
     transition-timing-function: ease-in;
@@ -355,12 +356,58 @@ i {
     align-items: center;
 }
 
-.btn-tema:hover {
+.btn-moon {
+    background-color: transparent;
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.dark .btn-moon {
+    z-index: 2;
+    opacity: 1;
+    top: 0;
+    background-color: blueviolet;
+    animation-name: btn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes btn {
+    from {
+        top: 50px;
+        opacity: 0;
+        background-color: transparent;
+    }
+
+    to {
+        top:0;
+        opacity: 1;
+        background-color: blueviolet;
+    }
+}
+
+.btn-moon i {
+    color: white;
+    transition: transform 0.5s;
+}
+
+.btn-moon:hover {
+    background-color: white;
+}
+
+.btn-moon:hover i {
+    color: blueviolet;
+    transform: rotate(-45deg);
+}
+
+.btn-sun:hover {
     background-color: blueviolet;
     border: 1px solid white;
 }
 
-.btn-tema i {
+.btn-sun i {
     color: blueviolet;
     font-size: 20px;
     position: absolute;
@@ -368,18 +415,17 @@ i {
     transition: transform 0.5s;
 }
 
-.btn-tema:hover i {
-    
+.btn-sun:hover i {
     color: white;
     transform: rotate(90deg);
-} */
+}
 
 
-/* .dark .content {
+.dark .content {
     background-color: black;
 }
 
 .dark .sign-in-js .content,
 .dark .sign-up-js .content {
     background-color: black;
-} */
+}

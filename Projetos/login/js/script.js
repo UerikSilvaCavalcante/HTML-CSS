@@ -14,9 +14,13 @@ signup.addEventListener('click', () => {
     bd.classList.add('sign-up-js')
 })
 
-// var tema = document.getElementById('ibtn-tema')
+var sun = document.getElementById('ibtn-sun')
+var dark = document.getElementById('ibtn-moon')
 
-// tema.addEventListener('click', ()=> {
+sun.addEventListener('click', ()=> {
+    bd.classList.add('dark')
+})
 
-//     tema.innerHTML = '<i class="fa-regular fa-moon"></i>'
-// })
+dark.addEventListener('click', ()=> {
+    bd.classList.remove('dark')
+})
