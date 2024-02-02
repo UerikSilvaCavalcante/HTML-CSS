@@ -332,3 +332,54 @@ i {
         width: 40%;
     }
 }
+
+/* .tema {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.btn-tema {
+    padding: 10px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color:  blueviolet;
+    font-size: 20px;
+    transition: background-color 0.5s, color 0.5s;
+    transition-timing-function: ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-tema:hover {
+    background-color: blueviolet;
+    border: 1px solid white;
+}
+
+.btn-tema i {
+    color: blueviolet;
+    font-size: 20px;
+    position: absolute;
+    rotate: 0deg;
+    transition: transform 0.5s;
+}
+
+.btn-tema:hover i {
+    
+    color: white;
+    transform: rotate(90deg);
+} */
+
+
+/* .dark .content {
+    background-color: black;
+}
+
+.dark .sign-in-js .content,
+.dark .sign-up-js .content {
+    background-color: black;
+} */
