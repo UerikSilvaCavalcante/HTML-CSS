@@ -357,9 +357,8 @@ i {
 }
 
 .btn-moon {
-    background-color: transparent;
+    background-color: blueviolet;
     position: absolute;
-    top: 50px;
     z-index: -1;
     opacity: 0;
 }
@@ -367,8 +366,6 @@ i {
 .dark .btn-moon {
     z-index: 2;
     opacity: 1;
-    top: 0;
-    background-color: blueviolet;
     animation-name: btn;
     animation-duration: 0.5s;
     animation-timing-function: ease-in;
@@ -376,15 +373,13 @@ i {
 
 @keyframes btn {
     from {
-        top: 50px;
         opacity: 0;
-        background-color: transparent;
+        z-index: -1;
     }
 
     to {
-        top:0;
+        z-index: 2;
         opacity: 1;
-        background-color: blueviolet;
     }
 }
 
