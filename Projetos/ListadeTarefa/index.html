@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <script src="https://kit.fontawesome.com/157e26f633.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="title"><h1>Lista de Tarefas</h1></div>
+        <div class="content content-1">
+            <div class="proguessbar">
+
+            </div>
+            <div class="tarefas">
+                <ul>
+                    <li>
+                      <span onclick="toggleContent(1)" >Item 1 <i class="fa-solid fa-plus mais" onclick="girar(1)" id="plus1"></i>
+                    </span>
+                      <div id="content1" class="item-content close">
+                        Conteúdo do Item 1
+                      </div>
+                    </li>
+                    <li>
+                      <span onclick="toggleContent(2)">Item 2
+                        <i class="fa-solid fa-plus mais" onclick="girar(2)" id="plus2"></i></span>
+                      <div id="content2" class="item-content close">
+                        Conteúdo do Item 2
+                      </div>
+                    </li>
+                    <!-- Adicione mais itens conforme necessário -->
+                  </ul>
+            </div>
+            <div class="button">
+                <button id="btn1" class="btn">Nova Tarefa</button>
+                <button id="btn2" class="btn">Deletar Tarefa</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleContent(itemId) {
+          var content = document.getElementById('content' + itemId);
+          if (content.classList.contains("close")) {
+            content.classList.remove("close");
+            content.classList.add("open");
+          } else {
+            content.classList.remove("open");
+            content.classList.add("close");
+          }
+        }
+        function girar(index){
+            let plus = document.getElementById("plus"+ index);
+            let men = document.getElementById("men" + index)
+            if (plus.style.animationName === "rot"){
+                plus.style.animationName = ""
+                plus.style.display = "block";
+            } else {
+                plus.style.animationName = "rot";
+                plus.style.rotate = "180deg";
+                setTimeout(()=> {
+                    plus.style.display = "none";
+                }, 500)
+               
+            }
+
+        }
+      </script>
+      
+</body>
+</html>

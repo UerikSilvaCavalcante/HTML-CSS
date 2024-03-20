@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #7D1FDB;
+}
+
+.title {
+    background-color: white;
+    text-align: center;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    border-radius: 30px;
+
+}
+
+.content {
+    background-color: white;
+    width: 50%;
+    height: 40%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item-content {
+    padding-left: 20px;
+}
+
+@keyframes abrir {
+    from {
+        display: none;
+        opacity: 0;
+        top: 0;
+    }
+
+    to {
+        transform: translate(0, 30%);
+        opacity: 1;
+        display: block;
+    }
+}
+
+@keyframes fechar {
+
+    from {
+        display: block;
+        opacity: 1;
+        top: 0;
+    }
+
+
+    to {
+        transform: translate(0, -50%);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes rot {
+    from {
+        rotate: 0deg;
+        display: none;
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+.close {
+    animation-name: fechar;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    display: none;
+}
+
+.open {
+    animation-name: abrir;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    display: block;
+}
+
+.mais {
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    left: 60%;
+    cursor: pointer;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+
+
+.button {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.btn {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #7D1FDB;
+    color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+span {
+    cursor: pointer;
+}
+
+.btn:hover {
+    transition: all 0.5s ease-out;
+    color: #7D1FDB;
+    border: 1px solid #7D1FDB;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(0.8);
+}
