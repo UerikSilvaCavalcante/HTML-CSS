@@ -10,63 +10,40 @@
 <body>
     <div class="conteiner">
         <div class="title"><h1>Lista de Tarefas</h1></div>
-        <div class="content content-1">
+        <div class="content content-1" id="contein">
             <div class="proguessbar">
-
+              <p id="num">0%</p>
+              <div class="color" id="bar">
+                  
+              </div>
             </div>
             <div class="tarefas">
-                <ul>
-                    <li>
-                      <span onclick="toggleContent(1)" >Item 1 <i class="fa-solid fa-plus mais" onclick="girar(1)" id="plus1"></i>
-                    </span>
-                      <div id="content1" class="item-content close">
-                        Conteúdo do Item 1
-                      </div>
-                    </li>
-                    <li>
-                      <span onclick="toggleContent(2)">Item 2
-                        <i class="fa-solid fa-plus mais" onclick="girar(2)" id="plus2"></i></span>
-                      <div id="content2" class="item-content close">
-                        Conteúdo do Item 2
-                      </div>
-                    </li>
+                <ul id="lista">
                     <!-- Adicione mais itens conforme necessário -->
                   </ul>
             </div>
             <div class="button">
-                <button id="btn1" class="btn">Nova Tarefa</button>
+                <button id="btn1" class="btn" >Nova Tarefa</button>
                 <button id="btn2" class="btn">Deletar Tarefa</button>
             </div>
         </div>
-    </div>
-    <script>
-        function toggleContent(itemId) {
-          var content = document.getElementById('content' + itemId);
-          if (content.classList.contains("close")) {
-            content.classList.remove("close");
-            content.classList.add("open");
-          } else {
-            content.classList.remove("open");
-            content.classList.add("close");
-          }
-        }
-        function girar(index){
-            let plus = document.getElementById("plus"+ index);
-            let men = document.getElementById("men" + index)
-            if (plus.style.animationName === "rot"){
-                plus.style.animationName = ""
-                plus.style.display = "block";
-            } else {
-                plus.style.animationName = "rot";
-                plus.style.rotate = "180deg";
-                setTimeout(()=> {
-                    plus.style.display = "none";
-                }, 500)
-               
-            }
+        <div id="fundo">
 
-        }
-      </script>
+        </div>
+        <div class="content content2" id="cont">
+          <div class="inp ">
+            <label for="ititulo">Nome da Tarefa</label>
+            <input type="text" name="titulo" id="ititulo">
+          </div>
+          <div class="inp">
+            <label for="conteudo">Conteudo</label>
+            <textarea name="" id="conteudo" cols="30" rows="10"></textarea>
+          </div>
+          <button class="btn" onclick="adiciona()">Adicionar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
       
 </body>
 </html>
